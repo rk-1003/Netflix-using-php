@@ -1,0 +1,138 @@
+*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		font-family:'Roboto',sans-serif;
+}
+.fw{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    border-radius: 4px;
+    padding: 70px;
+    width: 450px;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, .75);
+}
+body {
+    background: #000;
+}
+body::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    background: url("back.jpg");
+    background-position: center;
+}
+
+.fw h2
+{
+		color: #fff;
+    font-size: 2rem;
+}
+.fw form {
+    margin: 25px 0 65px;
+}
+form .fc {
+    height: 50px;
+    position: relative;
+    margin-bottom: 16px;
+}
+fc input {
+    height: 100%;
+    width: 100%;
+    background: #333;
+    border: none;
+    outline: none;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    padding: 0 20px;
+}
+.fc input:is(:focus, :valid) {
+    background: #444;
+    padding: 16px 20px 0;
+}
+.fc label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem;
+    pointer-events: none;
+    color: #8c8c8c;
+    transition: all 0.1s ease;
+}
+.fc input:is(:focus, :valid)~label {
+    font-size: 0.75rem;
+    transform: translateY(-130%);
+}
+form button {
+    width: 100%;
+    padding: 16px 0;
+    font-size: 1rem;
+    background: #e50914;
+    color: #fff;
+    font-weight: 500;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    margin: 25px 0 10px;
+    cursor: pointer;
+    transition: 0.1s ease;
+}
+form button:hover {
+    background: #c40812;
+}
+.fw a {
+    text-decoration: none;
+}
+.fw a:hover {
+    text-decoration: underline;
+}
+.fw :where(label, p, small, a) {
+    color: #b3b3b3;
+}
+form .fh {
+    display: flex;
+    justify-content: space-between;
+}
+form .rm {
+    display: flex;
+}
+form .rm input {
+    margin-right: 5px;
+    accent-color: #b3b3b3;
+}
+form .fh :where(label, a) {
+    font-size: 0.9rem;
+}
+.fw p a {
+    color: #fff;
+}
+.fw small {
+    display: block;
+    margin-top: 15px;
+    color: #b3b3b3;
+}
+.fw small a {
+    color: #0071eb;
+}
+@media (max-width: 740px) {
+    body::before {
+        display: none;
+    }
+    
+    .fw {
+        width: 100%;
+        top: 43%;
+    }
+    .fw form {
+        margin: 25px 0 40px;
+    }
+}
+		
